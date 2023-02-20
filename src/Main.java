@@ -1,10 +1,7 @@
 import java.awt.im.InputSubset;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import java.util.Comparator;
 import java.util. function.BiConsumer;
 public class Main {
     public static void main(String[] args) {
@@ -17,6 +14,13 @@ public class Main {
 
         //Задание 2
         determinesTheQuantityOfEvenNumbersAndOutputsThem(numbers);
+
+        //Доп задание
+        List<Integer> numbersList = Arrays.asList(27, 43, 38, 78, 3879, 67, 323, 47097, 464, 26, 24, 2524);
+        Optional<Integer> max = numbersList.stream().max(Integer::compare);
+        Optional<Integer> min = numbersList.stream().min(Integer::compare);
+        System.out.println("Максивальное число: " + max.get());
+        System.out.println("Минимальное число: " + min.get());
     }
 
     /** Задание 1 */
